@@ -5,6 +5,8 @@ import static edu.bloomu.mwyda.Currency.*;
 import java.util.Locale;
 
 /**
+ * Models a wallet which can hold different kinds of currencies.
+ *
  * @author Michael Wyda
  */
 
@@ -111,14 +113,13 @@ public class Wallet {
         return balance;
     }
 
+    /**
+     * Overrides the toString method to display the contents of the wallet.
+     */
     @Override
     public String toString() {
         return displayWallet() + "\n" + String.format("Your wallet's total balance is: $%.2f.",getBalance());
     }
-
-    /**
-     * Overrides the toString method to display the contents of the wallet.
-     */
 
 
     public static void main(String[] args) {

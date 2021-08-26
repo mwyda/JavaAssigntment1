@@ -10,6 +10,9 @@ public class Money {
 
     double balance;
 
+    /**
+     * Constructor to create a Money object
+     */
     public Money(double balance) {
         this.balance = balance;
     }

@@ -1,5 +1,6 @@
 package edu.bloomu.mwyda;
 
+
 /**
  * An immutable Currency that contains a value and a name.
  *
@@ -8,6 +9,9 @@ package edu.bloomu.mwyda;
 
 public class Currency {
 
+    /**
+     * Static common American currencies.
+     */
     final static Currency PENNY = new Currency(new Money(.01),"penny");
     final static Currency NICKEL = new Currency(new Money(.05),"nickel");
     final static Currency DIME = new Currency(new Money(.1),"dime");
@@ -22,6 +26,9 @@ public class Currency {
     final Money value;
     final String name;
 
+    /**
+     * Constructor to create a currency object.
+     */
     public Currency(Money value, String name)
     {
         if(value.balance > 0) {
@@ -49,8 +56,12 @@ public class Currency {
         return name;
     }
 
+    /**
+     * Overrides the toString method to format currencies as Name + value.
+     */
     @Override
     public String toString() {
         return String.format("Currency name: %s\nCurrency value: $%.2f",getName(),getValue().getBalance());
     }
+
 }
